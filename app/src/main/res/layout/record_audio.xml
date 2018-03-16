@@ -16,10 +16,9 @@
         android:id="@+id/btnStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tbtRecordPause"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/tbtRecordPause"
         android:layout_marginBottom="70dp"
+        android:layout_centerHorizontal="true"
         android:text="Stop" />
 
     <TextView

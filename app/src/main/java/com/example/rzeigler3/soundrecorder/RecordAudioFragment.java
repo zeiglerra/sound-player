@@ -18,26 +18,25 @@ import android.widget.ToggleButton;
 
 public class RecordAudioFragment extends Fragment {
 
-    private MainActivity mMainActivity;
-    private ToggleButton tbtRecordPause;
-    private Button btnStop;
-    private TextView txvRecordTime;
+    private ToggleButton mTbtRecordPause;
+    private Button mBtnStop;
+    private TextView mTxvRecordTime;
+
+    private final int LAYOUT_RESOURCE = R.layout.record_audio;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.record_audio,container,false);
+        View view = inflater.inflate(LAYOUT_RESOURCE,container,false);
 
-        tbtRecordPause = (ToggleButton) view.findViewById(R.id.tbtRecordPause);
+        mTbtRecordPause = view.findViewById(R.id.tbtRecordPause);
+        mBtnStop = view.findViewById(R.id.btnStop);
+        mTxvRecordTime = view.findViewById(R.id.txvRecordTime);
 
-        tbtRecordPause.setOnCheckedChangeListener( new RecordPauseHandler() );
+        mTbtRecordPause.setOnCheckedChangeListener( new RecordPauseHandler(getActivity().getExternalCacheDir().getAbsolutePath()) );
+        mBtnStop.setOnClickListener( new StopHandler(getActivity().getExternalCacheDir().getAbsolutePath()) );
 
         return view;
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mMainActivity = (MainActivity) context;
-    }
 }
