@@ -1,16 +1,15 @@
-package com.example.rzeigler3.soundrecorder;
+package com.example.rzeigler3.soundrecorder.recordaudio;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import com.example.rzeigler3.soundrecorder.R;
 
 /**
  * Created by rzeigler3 on 3/15/2018.
@@ -18,11 +17,10 @@ import android.widget.ToggleButton;
 
 public class RecordAudioFragment extends Fragment {
 
-    private ToggleButton mTbtRecordPause;
-    private Button mBtnStop;
-    private TextView mTxvRecordTime;
-
     private final int LAYOUT_RESOURCE = R.layout.record_audio;
+
+    private ToggleButton mTbtRecordPause;
+    private TextView mTxvRecordTime;
 
     @Nullable
     @Override
@@ -30,13 +28,20 @@ public class RecordAudioFragment extends Fragment {
         View view = inflater.inflate(LAYOUT_RESOURCE,container,false);
 
         mTbtRecordPause = view.findViewById(R.id.tbtRecordPause);
-        mBtnStop = view.findViewById(R.id.btnStop);
         mTxvRecordTime = view.findViewById(R.id.txvRecordTime);
 
-        mTbtRecordPause.setOnCheckedChangeListener( new RecordPauseHandler(getActivity().getExternalCacheDir().getAbsolutePath()) );
-        mBtnStop.setOnClickListener( new StopHandler(getActivity().getExternalCacheDir().getAbsolutePath()) );
+        RecordAudioHandler recordAudioHandler = new RecordAudioHandler(this);
+        mTbtRecordPause.setOnCheckedChangeListener(recordAudioHandler);
 
         return view;
+    }
+
+    public ToggleButton getTbtRecordPause() {
+        return mTbtRecordPause;
+    }
+
+    public TextView getTxvRecordTime() {
+        return mTxvRecordTime;
     }
 
 }

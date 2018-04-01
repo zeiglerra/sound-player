@@ -1,4 +1,4 @@
-package com.example.rzeigler3.soundrecorder;
+package com.example.rzeigler3.soundrecorder.junk;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Container"
+            android:textSize="35sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"/>
+
+        <RadioGroup
+            android:id="@+id/rgContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rBtnAACADTS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aac_adts"/>
+
+            <RadioButton
+                android:id="@+id/rBtnAMRNBF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amr_nb"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rBtnAMRWBF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amr_wb"/>
+
+            <RadioButton
+                android:id="@+id/rBtnMPEG2TS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mpeg2_ts" />
+
+            <RadioButton
+                android:id="@+id/rBtnMpeg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mpeg4" />
+
+            <RadioButton
+                android:id="@+id/rBtn3GPP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3gpp" />
+
+            <RadioButton
+                android:id="@+id/rBtnWebVorbis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/web_vorbis" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encoder"
+            android:textSize="35sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"/>
+
+        <RadioGroup
+            android:id="@+id/rgEncoder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rBtnACC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acc" />
+
+            <RadioButton
+                android:id="@+id/rBtnACCELD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_eld" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amr_narrow"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rBtnAMRWB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amr_wide" />
+
+            <RadioButton
+                android:id="@+id/rBtnHEAAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/he_aac" />
+
+            <RadioButton
+                android:id="@+id/rBtnVorbis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vorbis" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:background="@drawable/rectangle"-->
+        <!--android:backgroundTint="@color/colorPrimary"/>-->
+
+</LinearLayout>

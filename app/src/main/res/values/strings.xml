@@ -5,4 +5,19 @@
     <string name="tab_text_3">Tab 3</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="cache_file">myvoice.mpeg4</string>
+    <string name="saved_audio_directory">/sdcard/Sound Record Saves</string>
+    <string name="aac_adts">AAC ADTS</string>
+    <string name="amr_nb">AMR NB</string>
+    <string name="amr_wb">AMR WB</string>
+    <string name="mpeg2_ts">MPEG2/TS</string>
+    <string name="mpeg4">MPEG4</string>
+    <string name="_3gpp">3GPP</string>
+    <string name="web_vorbis">Web/Vorbis</string>
+    <string name="acc">ACC</string>
+    <string name="acc_eld">ACC-ELD</string>
+    <string name="amr_narrow">AMR (Narrow)</string>
+    <string name="amr_wide">AMR (Wide)</string>
+    <string name="he_aac">HE-AAC</string>
+    <string name="vorbis">Vorbis</string>
 </resources>

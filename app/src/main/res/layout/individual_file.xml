@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:padding="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/colorDefault">
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar"-->
+        <!--style="?android:attr/progressBarStyleHorizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <TextView
+        android:id="@+id/txvFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="audiofilename"
+        android:layout_alignParentTop="true"
+        android:textSize="30sp"
+        android:duplicateParentState="true"
+        android:textColor="@android:color/black"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:drawable/ic_delete"
+        />
+
+    <TextView
+        android:id="@+id/txvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="30sp"
+        android:text="00:00"
+        android:duplicateParentState="true"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/txvExtension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MPEG4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="20sp"
+        android:duplicateParentState="true"
+        android:textColor="@android:color/black"/>
+
+</RelativeLayout>

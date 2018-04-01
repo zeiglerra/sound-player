@@ -1,8 +1,12 @@
 package com.example.rzeigler3.soundrecorder;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentPagerAdapter;
+
+import com.example.rzeigler3.soundrecorder.options.OptionsFragment;
+import com.example.rzeigler3.soundrecorder.savedaudio.SavedAudioFragment;
+import com.example.rzeigler3.soundrecorder.recordaudio.RecordAudioFragment;
 
 /**
  * Created by Rick on 3/15/2018.
@@ -20,9 +24,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                fragment = new RecordAudioFragment();
+                fragment = new OptionsFragment();
                 break;
             case 1:
+                fragment = new RecordAudioFragment();
+                break;
+            case 2:
                 fragment = new SavedAudioFragment();
                 break;
             default:
@@ -33,6 +40,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 }
